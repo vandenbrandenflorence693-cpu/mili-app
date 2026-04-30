@@ -32,8 +32,8 @@ jobs:
 
       - name: Build
         env:
-          VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
-          VITE_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY }}
+          VITE_SUPABASE_URL: https://vkdkarpfjyvwicjvrtwu.supabase.co
+          VITE_SUPABASE_ANON_KEY: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZrZGthcnBmanl2d2ljanZydHd1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDk5OTM3MDAsImV4cCI6MjA2NTU2OTcwMH0.qIow6bVJlA7vP1zQS8Yq1h3t9vJ6YqL0K8N3mBqZxA8
         run: npm run build
 
       - name: Upload artifact
