@@ -154,6 +154,7 @@ export default function App() {
           if (dbData.debtsList) setDebtsList(dbData.debtsList);
           if (dbData.shopItemsList) setShopItemsList(dbData.shopItemsList);
           if (dbData.inventoryList) setInventoryList(dbData.inventoryList);
+          if (dbData.diaryEntries) setDiaryEntries(dbData.diaryEntries);
         }
       } catch (err) {
         console.error("Failed to load from Supabase:", err);
@@ -169,7 +170,7 @@ export default function App() {
     
     if (supabase) {
       const syncData = async () => {
-        const dataToSave = { status, rulesList, debtsList, shopItemsList, inventoryList };
+        const dataToSave = { status, rulesList, debtsList, shopItemsList, inventoryList, diaryEntries };
         await supabase.from('app_data').upsert({ id: 1, data: dataToSave, updated_at: new Date().toISOString() });
       };
       syncData();
